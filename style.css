@@ -30,7 +30,27 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-html,
-body {
-    font-size: 16px;
+/* 폰트 */
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+}
+
+h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+}
+
+h3 {
+    font-size: var(--font-reqular);
+    font-weight: var(--weight-reqular);
+    color: var(--color-black);
+}
+p{
+    font-size: var(--font-reqular);
+    font-weight: var(--weight-reqular);
+    color: var(--color-black);
 }
