@@ -42,8 +42,11 @@ a {
 .section {
     padding: 3.125em;
     text-align: center;
-    max-width: 1200px;
     margin: 0 auto;
+}
+
+.section__container {
+    max-width: 1200px;
 }
 
 /* 폰트 */
@@ -224,4 +227,59 @@ p {
     display: block;
     padding-bottom: 0.5em;
     color: var(--color-gray);
+}
+
+/* SKILLS */
+
+#skills {
+    background-color: var(--color-blue);
+}
+
+#skills h1,
+h2,
+.item {
+    color: var(--color-yellow)
+}
+
+.skillset {
+    display: flex;
+    margin: 1em 0;
+}
+
+.skillset .skillset__left,
+.skillset__right {
+    padding: 2.2em;
+}
+
+.skillset .skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-black);
+}
+
+.skill .item .skill__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25em;
+}
+
+.skill .item .skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color:var(--color-white);
+    margin-bottom: 1.25em;
+}
+.skill .item .skill__bar .skill__value {}
+
+.skillset .skillset__left .skillset .skillset__right {
+    flex-basis: 40%;
+    background-color: var(--color-gray);
+}
+
+.skillset .skillset__title {
+    color: var(--color-white);
+    font-weight: bolder;
+}
+
+.skillset .skillset__right .etc {
+    background-color: var(--color-yellow);
 }
