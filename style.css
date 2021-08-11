@@ -1,29 +1,36 @@
 /* GLOBAL */
-:root{
+:root {
     /* COLOR */
-    --color-white:#fff;
-    --color-black:#000;
-    --color-green:#1a3431;
-    --color-blue:#0233044;
-    --color-yellow:#f3cc62;
-    --color-purple:#341877;
-    --color-gray:#778282;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-green: #1a3431;
+    --color-blue: #0233044;
+    --color-yellow: #f3cc62;
+    --color-purple: #341877;
+    --color-gray: #778282;
 
     /* FONT SIZE */
+    --font-large: 3rem;
+    --font-medium: 1.75rem;
+    --font-reqular: 1.125rem;
+    --font-small: 1rem;
+    --font-micro: .875rem;
 
     /* FONT WEIGHT */
-    --weight-bold:700;
-    --weight-semi-bold:760;
-    --weight-reqular:400;
+    --weight-bold: 700;
+    --weight-semi-bold: 760;
+    --weight-reqular: 400;
 
     /* SIZE */
 }
 
 /* 공통태그 */
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-html,body{
+
+html,
+body {
     font-size: 16px;
 }
