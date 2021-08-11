@@ -24,7 +24,7 @@
     /* SIZE */
 }
 
-/* 공통 */
+/* COMMON */
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -39,12 +39,20 @@ a {
     display: block;
 }
 
+.section {
+    padding: 3.125em;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* 폰트 */
 
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
     color: var(--color-black);
+    margin-bottom: 1em;
 }
 
 h2 {
@@ -63,6 +71,7 @@ p {
     font-size: var(--font-reqular);
     font-weight: var(--weight-reqular);
     color: var(--color-black);
+    white-space: pre-wrap;
 }
 
 /* NAV */
@@ -137,5 +146,82 @@ p {
 
 .home__title {
     margin-left: 1em;
-    color:var(--color-white);
+    color: var(--color-white);
+}
+
+/* ABOUT */
+#about {}
+
+#about p {
+    font-weight: bolder;
+    color: var(--color-green);
+}
+
+.about__majors {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+
+.about__majors li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    max-width: 300px;
+    border: 1px solid var(--color-gray);
+    border-radius: 5%;
+    flex-wrap: wrap;
+    transition: all .3s;
+}
+
+.about__majors>li>i {
+    font-size: 10em;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(2, 48, 68, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all .3s;
+}
+
+.about__majors li:hover {
+    transform: rotate(10deg)
+}
+
+.about__majors li:hover i {
+    background: var(--color-yellow);
+    background: linear-gradient(0deg, var(--color-yellow) 0%, rgba(2, 48, 68, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scale(1.1);
+}
+
+.about__majors li h3 {
+    font-weight: bolder;
+    color: var(--color-gray)
+}
+
+.career {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.career .career__list {
+    font-size: var(--font-reqular);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.career li+li {
+    border-top: 0 !important;
+}
+
+.career .career__list .career__period {
+    display: block;
+    padding-bottom: 0.5em;
+    color: var(--color-gray);
 }
