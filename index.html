@@ -2,72 +2,130 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!! YeonHee Portfolio!</title>
-    <meta name="description" content="Yeonhee's personal portfolio site">
-    <meta name="author" content="YeonHee">
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./img/half-moon.png">
-    <!-- ICONS -->
-    <script src="https://kit.fontawesome.com/41e6e39cb2.js" crossorigin="anonymous"></script>
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap"
-        rel="stylesheet">
-    <!-- JS -->
-    <script src="./main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome!! YeonHee Portfolio!</title>
+  <meta name="description" content="Yeonhee's personal portfolio site">
+  <meta name="author" content="YeonHee">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="./img/half-moon.png">
+  <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/41e6e39cb2.js" crossorigin="anonymous"></script>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap"
+    rel="stylesheet">
+  <!-- JS -->
+  <script src="./main.js" defer></script>
 </head>
 
 <body>
-    <!-- NAV -->
-    <nav id="navbar">
-        <a class="navbar__logo" href="javacript:void(0)"><i class="fas fa-moon"></i>Yoni</a>
-        <ul class="navbar__menu">
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>SKILLS</li>
-            <li>WORK</li>
-            <li>CONTACT</li>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="navbar__logo" href="javacript:void(0)"><i class="fas fa-moon"></i>Yoni</a>
+    <ul class="navbar__menu">
+      <li>HOME</li>
+      <li>ABOUT</li>
+      <li>SKILLS</li>
+      <li>WORK</li>
+      <li>CONTACT</li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <img src="./img/profile.jpg" alt="profile_img" class="home__profile" />
+    <h1 class="home__title">안녕하세요! 저는<strong class="cursor"></strong></h1>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h1>About me</h1>
+    <p>
+      안녕하세요 ! 웹퍼블리셔를 꿈꾸는 조연희입니다!
+      현재도 학원 및 인강 강의를 들으며
+      하루하루 코드와 싸우고 있답니다 😵
+      경력도 전공도 없지만,
+      함께 일하게 될 동료 팀원들에게 도움이 될 수 있도록
+      끊임없이 배움을 놓지않는 탐구하는 웹 퍼블리셔가 되겠습니다!!😊🤗🙂
+    </p>
+    <ul class="about__majors">
+      <li><i class="fab fa-html5"></i>
+        <h3>HTML5</h3>
+      </li>
+      <li><i class="fab fa-css3-alt"></i>
+        <h3>CSS</h3>
+      </li>
+      <li><i class="fab fa-js"></i>
+        <h3>JAVASCRIPT</h3>
+      </li>
+    </ul>
+    <ul class="career">
+      <li><span class="career__period">2021.3~2021.10(수료예정)</span> 종로그린컴퓨터아카데미</li>
+      <li><span class="career__period">2017.2~2018.11</span>케이텍(사무직 근무)</li>
+      <li><span class="career__period">2013.4~2014.4</span>에스지코퍼레이션(사무직 근무)</li>
+      <li><span class="career__period">2011.5~2012.7</span>청호나이스(사무직 근무)</li>
+    </ul>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h1>Skills</h1>
+    <h2>Skills & Attribute</h2>
+    <div class="skillset">
+      <div class="skillset__left">
+        <h3 class="skillset__title">Skills</h3>
+        <ul class="skill">
+          <li class="item">
+            <span>HTML</span>
+            <span>80%</span>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </li>
+          <li class="item">
+            <span>HTML</span>
+            <span>80%</span>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </li>
+          <li class="item">
+            <span>HTML</span>
+            <span>80%</span>
+            <div class="skill__bar">
+              <div class="skill__value"></div>
+            </div>
+          </li>
         </ul>
-    </nav>
+      </div>
+      <div class="skillset__right">
+        <div class="tools">
+          <h3 class="skillset__title">Tools</h3>
+          <ul class="tools__lists">
+            <li><img src="./img/icons8-visual-studio-code-2019.svg" alt="비쥬얼스튜디오">비쥬얼스튜디오</li>
+          </ul>
+        </div>
+        <div class="etc">
+          <h3 class="skillset__title">Etc</h3>
+          <ul class="etc__list">
+            <li><i class="fab fa-git-square"></i><span>Git</span></li>
+            <li><i class="fab fa-github"></i><span>GitHub</span></li>
+            <li><img src="https://img.icons8.com/doodle/192/000000/notion.png"/><span>Notion</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- HOME -->
-    <section id="home">
-        <img src="./img/profile.jpg" alt="profile_img" class="home__profile"/>
-        <h1 class="home__title">안녕하세요! 저는<strong class="cursor"></strong></h1>
-    </section>
+  <!-- WORK -->
+  <section id="work"></section>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h1>About me</h1>
-        <p>
-            안녕하세요 ! 웹퍼블리셔를 꿈꾸는 조연희입니다!
-            현재도 학원 및 인강 강의를 들으며
-            하루하루 코드와 싸우고 있답니다 😵
-            경력도 전공도 없지만,
-            함께 일하게 될 동료 팀원들에게 도움이 될 수 있도록
-            끊임없이 배움을 놓지않는 탐구하는 웹 퍼블리셔가 되겠습니다!!😊🤗🙂
-        </p>
-        <ul class="career">
-            <li><span class="career__period">2021.3~2021.10(수료예정)</span> 종로그린컴퓨터아카데미</li>
-            <li><span class="career__period">2017.2~2018.11</span>케이텍(사무직 근무)</li>
-            <li><span class="career__period">2013.4~2014.4</span>에스지코퍼레이션(사무직 근무)</li>
-            <li><span class="career__period">2011.5~2012.7</span>청호나이스(사무직 근무)</li>
-        </ul>
-        
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills"></section>
-
-    <!-- WORK -->
-    <section id="work"></section>
-
-    <!-- CONTACT -->
-    <section id="contact"></section>
+  <!-- CONTACT -->
+  <section id="contact"></section>
 </body>
 
 </html>
