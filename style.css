@@ -1,0 +1,29 @@
+/* GLOBAL */
+:root{
+    /* COLOR */
+    --color-white:#fff;
+    --color-black:#000;
+    --color-green:#1a3431;
+    --color-blue:#0233044;
+    --color-yellow:#f3cc62;
+    --color-purple:#341877;
+    --color-gray:#778282;
+
+    /* FONT SIZE */
+
+    /* FONT WEIGHT */
+    --weight-bold:700;
+    --weight-semi-bold:760;
+    --weight-reqular:400;
+
+    /* SIZE */
+}
+
+/* 공통태그 */
+*{
+    box-sizing:border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html,body{
+    font-size: 16px;
+}
