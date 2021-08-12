@@ -30,9 +30,11 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-html{
+
+html {
     overflow-x: hidden;
 }
+
 ul {
     list-style: none;
 }
@@ -83,12 +85,15 @@ p {
     font-size: var(--font-reqular);
     font-weight: var(--weight-reqular);
     color: var(--color-black);
-    white-space: pre-wrap;
 }
 
 button {
     background-color: transparent;
 
+}
+
+.hide {
+    display: none;
 }
 
 /* NAV */
@@ -100,6 +105,7 @@ button {
     color: var(--color-white);
     padding: 1rem;
     border-bottom: 1px solid;
+    position: relative;
 }
 
 .navbar__logo {
@@ -146,6 +152,66 @@ button {
     margin-left: 1em;
 }
 
+.btn--burger {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.btn--burger .btn--burger--line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-yellow);
+    border-radius: 3px;
+}
+
+.btn--burger .btn--burger--line::after,
+.btn--burger .btn--burger--line::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-color: var(--color-yellow);
+    transition: .3s;
+    border-radius: 3px;
+}
+
+.btn--burger .btn--burger--line::after {
+    top: -10px;
+}
+
+.btn--burger .btn--burger--line::before {
+    bottom: -10px;
+}
+
+.btn--burger:hover .btn--burger--line {
+    background-color: transparent;
+}
+
+.btn--burger:hover .btn--burger--line::after {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn--burger:hover .btn--burger--line::before {
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+
 /* HOME */
 
 #home {
@@ -167,7 +233,6 @@ button {
 }
 
 /* ABOUT */
-#about {}
 
 #about p {
     font-weight: bolder;
@@ -193,6 +258,7 @@ button {
     border-radius: 5%;
     flex-wrap: wrap;
     transition: all .3s;
+    margin-top: 1em;
 }
 
 .about__majors>li>i {
@@ -465,15 +531,18 @@ h2,
 
 .contact__links li {
     margin: .3em;
-    transition:.3s;
+    transition: .3s;
 }
-.contact__links li:hover{
+
+.contact__links li:hover {
     transform: scale(1.1);
-   
+
 }
-.contact__links li:hover a{
+
+.contact__links li:hover a {
     color: var(--color-yellow);
 }
+
 .contact__links li a {
     color: var(--color-white);
     transition: .3s;
@@ -489,23 +558,86 @@ h2,
     color: var(--color-white);
     font-size: var(--font-medium);
 }
+
 .copyright::after,
-.copyright::before{
+.copyright::before {
     position: absolute;
-    left:calc(50% - 175px);
-    content:"";
+    left: calc(50% - 175px);
+    content: "";
     width: 350px;
-    max-width:350px;
+    max-width: 350px;
     height: 1px;
     background-color: var(--color-yellow);
 }
-.copyright::after{
+
+.copyright::after {
     top: 10px;
 }
-.copyright::before{
+
+.copyright::before {
     bottom: -20px;
 }
-.copyright span::after{
-    content:"/";
-    padding-right:1em;
+
+.copyright span::after {
+    content: "/";
+    padding-right: 1em;
+}
+
+/* 반응형 */
+
+@media screen and (max-width:768px) {
+
+    /* NAV */
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        text-align: center;
+        margin-top: 1em;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+    }
+
+    .navbar__menu li.navbar__menu__item {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+
+    .btn--burger {
+        display: block;
+    }
+
+    /* ABOUT */
+    .about__majors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__majors>li {
+        max-width: 180px;
+        height: 180px;
+    }
+
+    .about__majors li i {
+        font-size: 7rem;
+    }
+
+    /* SKILLS */
+
+    .skillset {
+        flex-direction: column;
+    }
+
+    /* WORK */
+    .work__categories {
+        transform: scale(.8);
+    }
+    .work__projects .project{
+        max-width: 100%;
+    }
+   
 }
