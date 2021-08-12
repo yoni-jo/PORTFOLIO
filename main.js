@@ -18,3 +18,21 @@ document.addEventListener("scroll", (event) => {
 })
 
 //메뉴 클릭시 해당 세션으로 스크롤 이벤트주기.
+
+const navbarMenu=document.querySelector('.navbar__menu');
+
+navbarMenu.addEventListener('click',(event)=>{
+    const target = event.target;
+    const hook = target.dataset.hook;
+    if(hook==null){
+        return;
+    }else{
+        let section = document.querySelector(hook);
+        let section_Top = section.offsetTop - navbar_Height
+      
+        window.scrollTo({
+            top:section_Top,
+            behavior:"smooth"
+        })
+    }
+})

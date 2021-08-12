@@ -30,11 +30,11 @@
   <nav id="navbar">
     <a class="navbar__logo" href="javacript:void(0)"><i class="fas fa-moon"></i>Yoni</a>
     <ul class="navbar__menu">
-      <li class="navbar__menu__item active">HOME</li>
-      <li class="navbar__menu__item">ABOUT</li>
-      <li class="navbar__menu__item">SKILLS</li>
-      <li class="navbar__menu__item">WORK</li>
-      <li class="navbar__menu__item">CONTACT</li>
+      <li class="navbar__menu__item active" data-hook="#home">HOME</li>
+      <li class="navbar__menu__item" data-hook="#about">ABOUT</li>
+      <li class="navbar__menu__item" data-hook="#skills">SKILLS</li>
+      <li class="navbar__menu__item" data-hook="#work">WORK</li>
+      <li class="navbar__menu__item" data-hook="#contact">CONTACT</li>
     </ul>
 
 
@@ -46,7 +46,7 @@
   </nav>
 
   <!-- HOME -->
-  <section id="home">
+  <section id="home" data-id="home">
     <img src="./img/profile.jpg" alt="profile_img" class="home__profile" />
     <h1 class="home__title">안녕하세요! 저는<strong class="cursor"></strong><br>웹퍼블리셔입니다.</h1>
   </section>
