@@ -238,10 +238,28 @@ button {
 }
 
 .home__title {
+    width: 450px;
     margin-left: 1em;
     color: var(--color-white);
 }
 
+.home__title .cursor {
+    line-height: 1.5;
+    position: relative;
+    background-color: var(--color-gray);
+}
+
+.home__title .cursor::after {
+    position: absolute;
+    right:-10px;
+    content: "";
+    width: 2px;
+    height: 1.2em;
+    background-color: var(--color-white);
+}
+.cursor.active::after{
+    display: none;
+}
 .contact--btn {
     position: absolute;
     bottom: 1.5rem;
@@ -652,7 +670,8 @@ h2,
         flex-direction: column;
     }
 
-    .home__profile,.home__title {
+    .home__profile,
+    .home__title {
         transform: scale(.7);
     }
 
