@@ -105,9 +105,14 @@ button {
     color: var(--color-white);
     padding: 1rem;
     border-bottom: 1px solid;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: .3s
 }
-
+#navbar.blue{
+    background-color: var(--color-blue);
+}
 .navbar__logo {
     color: var(--color-white);
     font-size: var(--font-medium);
