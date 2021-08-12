@@ -1,7 +1,7 @@
 "use strict"
 
 
-// 스크롤 시 navbar 투명도주기 
+// 스크롤 시 navbar 색상변경 
 const navbar = document.querySelector('#navbar');
 const navbar_Height = navbar.getBoundingClientRect().height;
 
@@ -16,3 +16,5 @@ document.addEventListener("scroll", (event) => {
     }
 
 })
+
+//메뉴 클릭시 해당 세션으로 스크롤 이벤트주기.
