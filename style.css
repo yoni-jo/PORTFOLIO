@@ -39,6 +39,11 @@ a {
     display: block;
 }
 
+img {
+    display: block;
+
+}
+
 .section {
     padding: 3.125em;
     text-align: center;
@@ -75,6 +80,11 @@ p {
     font-weight: var(--weight-reqular);
     color: var(--color-black);
     white-space: pre-wrap;
+}
+
+button {
+    background-color: transparent;
+
 }
 
 /* NAV */
@@ -233,7 +243,7 @@ p {
 
 #skills {
     background-color: var(--color-blue);
-   
+
 }
 
 #skills h1,
@@ -250,18 +260,20 @@ h2,
 .skillset .skillset__title {
     color: var(--color-white);
     font-weight: bolder;
-    padding:1em;
+    padding: 1em;
     position: relative;
 }
-.skillset .skillset__title::after{
+
+.skillset .skillset__title::after {
     position: absolute;
-    left:calc(50% - 25px);
-    bottom:10%;
-    content:"";
+    left: calc(50% - 25px);
+    bottom: 10%;
+    content: "";
     width: 50px;
     height: 3px;
     background-color: var(--color-white);
 }
+
 .skillset .skillset__right .etc {
     background-color: var(--color-yellow);
 }
@@ -300,13 +312,130 @@ h2,
 .etc {
     padding: 2em;
 }
+
 .skillset__right .tools li,
-.etc li{
-    padding:.5em;
+.etc li {
+    padding: .5em;
     font-weight: var(--weight-bold);
     font-size: var(--font-small);
-    color:var(--color-black);
+    color: var(--color-black);
 }
+
 .skillset__right .tools {
     background-color: var(--color-gray);
+}
+
+/* WORK */
+
+#work h3 {
+    font-weight: var(--weight-bold);
+}
+
+.work__categories {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.work__categories li {
+    margin-right: .2em
+}
+
+.work__categories li .category--btn {
+    border: 1px solid var(--color-gray);
+    border-radius: 3px;
+    font-size: var(--font-reqular);
+    padding: 0.3em 0.5em;
+    transition: .3s;
+}
+
+.work__categories li .category--btn.active,
+.category--btn:hover {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    
+}
+
+.work__categories li .category--btn.active .category--count,
+.category--btn:hover .category--count {
+    top: 0;
+    opacity: 1;
+}
+
+.category--btn .category--count {
+    display: inline-block;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: var(--color-white);
+    position: relative;
+    top: -35px;
+    left: 4px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.work__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work__projects .project {
+    display: block;
+    width: 400px;
+    margin: .5em;
+    position: relative;
+    border:3px solid var(--color-purple);
+    border-radius:5px;
+    overflow: hidden;
+}
+
+.work__projects .project .project__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.work__projects .project .project__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(52, 24, 119,0.8);
+    transition: .5s;
+    overflow: hidden;
+    opacity: 0
+}
+
+.work__projects .project .project__description:hover {
+    opacity: 1;
+}
+.work__projects .project .project__description>h3::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    left: calc(50% - 40px);
+    bottom: 0;
+    position: absolute;
+}
+
+.work__projects .project .project__description>*
+{
+    position: relative;
+    color: var(--color-white);
+    line-height: 2;
+    transform: translateY(-500px);
+    transition: .3s
+}
+
+.work__projects .project .project__description:hover>*{
+    transform: translateY(0);
 }
