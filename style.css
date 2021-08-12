@@ -51,11 +51,11 @@ img {
     width: 100%;
     padding: 3.125em;
     text-align: center;
-    margin: 0 auto;
 }
 
 .section__container {
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 폰트 */
@@ -178,6 +178,7 @@ button {
     display: flex;
     justify-content: space-around;
     margin: 2em 0;
+    flex-wrap: wrap;
 }
 
 .about__majors li {
@@ -389,7 +390,7 @@ h2,
 
 .work__projects .project {
     display: block;
-    width: 400px;
+    max-width: 350px;
     margin: .5em;
     position: relative;
     border: 3px solid var(--color-purple);
