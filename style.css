@@ -110,9 +110,11 @@ button {
     z-index: 10;
     transition: .3s
 }
-#navbar.blue{
+
+#navbar.blue {
     background-color: var(--color-blue);
 }
+
 .navbar__logo {
     color: var(--color-white);
     font-size: var(--font-medium);
@@ -225,6 +227,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .home__profile {
@@ -235,6 +240,32 @@ button {
 .home__title {
     margin-left: 1em;
     color: var(--color-white);
+}
+
+.contact--btn {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    border: none;
+    font-weight: var(--weight-bold);
+    font-size: var(--font-small);
+    animation: jumping .7s infinite;
+}
+
+.contact--btn:hover {
+    background-color: #fff;
+    color: var(--color-purple);
+    animation: jumping .7s paused;
+}
+
+@keyframes jumping {
+    100% {
+        transform: scale(1.1) translateY(-1rem)
+    }
 }
 
 /* ABOUT */
@@ -616,6 +647,21 @@ h2,
         display: block;
     }
 
+    /* HOME */
+    #home {
+        flex-direction: column;
+    }
+
+    .home__profile,.home__title {
+        transform: scale(.7);
+    }
+
+    .contact--btn {
+        width: 100px;
+        height: 40px;
+        font-size: var(--font-micro);
+    }
+
     /* ABOUT */
     .about__majors {
         flex-direction: column;
@@ -641,8 +687,9 @@ h2,
     .work__categories {
         transform: scale(.8);
     }
-    .work__projects .project{
+
+    .work__projects .project {
         max-width: 100%;
     }
-   
+
 }
