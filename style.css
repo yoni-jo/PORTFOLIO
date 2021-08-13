@@ -479,6 +479,7 @@ h2,
 
 #work h3 {
     font-weight: var(--weight-bold);
+    color:var(--color-yellow)
 }
 
 .work__categories {
@@ -681,11 +682,13 @@ h2,
     bottom: -20px;
 }
 
-.copyright span::after {
-    content: "/";
-    padding-right: 1em;
+.copyright .year,strong{
+    color:var(--color-yellow);
+    line-height:1.2;
 }
-
+.copyright strong{
+font-weight: bolder;
+}
 /* TOP BUTTON */
 
 .arrow_top--btn {
