@@ -53,3 +53,15 @@ function scrollToSlide(selector) {
         behavior: "smooth"
     })
 }
+
+//스크롤시 home 세션의 opacity값이 변하게하기
+
+const homeSection = document.querySelector('#home')
+const homeSection_Height = homeSection.getBoundingClientRect().height
+
+document.addEventListener('scroll', () => {
+    const scrollHeight = window.scrollY
+    let opacity = 1-scrollHeight/homeSection_Height
+   
+    homeSection.style.opacity=opacity
+})
