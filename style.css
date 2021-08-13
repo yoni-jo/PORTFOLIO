@@ -721,7 +721,15 @@ font-weight: bolder;
 /* 반응형 */
 
 @media screen and (max-width:768px) {
+:root{
+    /* FONT SIZE */
+    --font-large: 2rem;
+    --font-medium: 1.2rem;
+    --font-reqular: 1rem;
+    --font-small: .8rem;
+    --font-micro: .55rem;
 
+}
     /* NAV */
     #navbar {
         flex-direction: column;
@@ -749,13 +757,17 @@ font-weight: bolder;
     /* HOME */
     #home {
         flex-direction: column;
+     
     }
 
     .home__profile,
     .home__title {
         transform: scale(.7);
     }
-
+    .home__title{
+        margin-top: -70px;
+    }
+   
     .contact--btn {
         width: 100px;
         height: 40px;
