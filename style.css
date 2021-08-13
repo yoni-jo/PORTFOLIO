@@ -655,14 +655,15 @@ h2,
     background: linear-gradient(112deg, #f0f0f0, #cacaca);
     box-shadow: 1px 4px 0px 0px #bcbcbc, 2px 5px 0px #ffffff;
     transition: color .3s;
+    z-index: 9;
 }
-
-
-
+.arrow_top--btn.hide{
+    display: none;
+}
 .arrow_top--btn:hover {
     bottom: 1.9em;
     color: var(--color-yellow);
-    -webkit-text-stroke: 1px var(--color-white);
+    -webkit-text-stroke: .3px var(--color-white);
 }
 
 /* 반응형 */

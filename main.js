@@ -2,17 +2,22 @@
 
 
 // 스크롤 시 navbar 색상변경 
+// top버튼 스크롤시 생기게하기 
 const navbar = document.querySelector('#navbar');
 const navbar_Height = navbar.getBoundingClientRect().height;
+const top_Btn = document.querySelector(".arrow_top--btn")
 
 const BLUE = 'blue'
+const HIDE ="hide"
 document.addEventListener("scroll", (event) => {
     const scrollHeight = window.scrollY
 
     if (scrollHeight > navbar_Height) {
         navbar.classList.add(`${BLUE}`)
+        top_Btn.classList.remove(`${HIDE}`)
     } else {
         navbar.classList.remove(`${BLUE}`)
+        top_Btn.classList.add(`${HIDE}`)
     }
 
 })
@@ -44,6 +49,14 @@ contact_Btn.addEventListener('click', (event) => {
     }
 })
 
+//top버튼 클릭시 HOME 화면으로 스크롤
+
+top_Btn.addEventListener("click",(event)=>{
+    const target = event.target;
+    const hook = target.dataset.hook;
+    scrollToSlide(hook)
+})
+
 // 해당 세션으로 이동하는 함수
 function scrollToSlide(selector) {
     const section = document.querySelector(selector);
@@ -65,3 +78,5 @@ document.addEventListener('scroll', () => {
    
     homeSection.style.opacity=opacity
 })
+
+
