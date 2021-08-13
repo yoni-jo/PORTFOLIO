@@ -133,6 +133,17 @@ button {
 .navbar__menu {
     display: flex;
     align-items: center;
+    overflow: hidden;
+}
+
+.navbar__menu.show {
+    display: flex;
+    animation:open .3s ease-out;
+  
+}
+@keyframes open {
+    0%{transform:translateY(-500px)}
+    100% {transform:translateY(0)}
 }
 
 .navbar__menu li.navbar__menu__item {
@@ -142,6 +153,7 @@ button {
     box-sizing: border-box;
     border-radius: 5px;
     transition: all .5s;
+    border: 1px solid transparent;
 }
 
 .navbar__menu li.navbar__menu__item.active {
@@ -219,7 +231,17 @@ button {
     bottom: 50%;
     transform: translateY(-50%);
 }
-
+.btn--burger.close .btn--burger--line{
+    background-color: transparent;
+}
+.btn--burger.close .btn--burger--line::after{
+    top: 50%;
+    transform:rotate(45deg);
+}
+.btn--burger.close .btn--burger--line::before{
+    top: 50%;
+    transform:rotate(-45deg);
+}
 /* HOME */
 
 #home {
@@ -522,24 +544,29 @@ h2,
     overflow: hidden;
     display: none;
 }
-.work__projects .project.show{
+
+.work__projects .project.show {
     display: block;
 }
-.work__projects.showing{
+
+.work__projects.showing {
     opacity: 0;
     animation: showing .6s forwards;
 }
+
 @keyframes showing {
-    0%{
+    0% {
         opacity: 0;
-        transform:scale(0)
+        transform: scale(0)
     }
-    100%{
+
+    100% {
         opacity: 1;
-        transform:scale(100%)
+        transform: scale(100%)
     }
-    
+
 }
+
 .work__projects .project .project__img {
     max-width: 100%;
     max-height: 100%;
@@ -677,9 +704,11 @@ h2,
     transition: color .3s;
     z-index: 9;
 }
-.arrow_top--btn.hide{
+
+.arrow_top--btn.hide {
     display: none;
 }
+
 .arrow_top--btn:hover {
     bottom: 1.9em;
     color: var(--color-yellow);

@@ -138,3 +138,13 @@ work_Categories.addEventListener('click', (event) => {
 
 
 })
+
+
+//햄버거 버튼 클릭시 숨겨진 메뉴 보이게 하기
+const ham_Btn= document.querySelector('.btn--burger')
+const nav_bar=document.querySelector('.navbar__menu')
+ham_Btn.addEventListener('click', ()=>{
+    const CLOSE = 'close'
+    ham_Btn.classList.toggle(`${CLOSE}`)
+    nav_bar.classList.toggle(`${SHOW}`)
+})
