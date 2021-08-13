@@ -8,7 +8,7 @@ const navbar_Height = navbar.getBoundingClientRect().height;
 const top_Btn = document.querySelector(".arrow_top--btn")
 
 const BLUE = 'blue'
-const HIDE ="hide"
+const HIDE = "hide"
 document.addEventListener("scroll", (event) => {
     const scrollHeight = window.scrollY
 
@@ -51,7 +51,7 @@ contact_Btn.addEventListener('click', (event) => {
 
 //top버튼 클릭시 HOME 화면으로 스크롤
 
-top_Btn.addEventListener("click",(event)=>{
+top_Btn.addEventListener("click", (event) => {
     const target = event.target;
     const hook = target.dataset.hook;
     scrollToSlide(hook)
@@ -74,9 +74,50 @@ const homeSection_Height = homeSection.getBoundingClientRect().height
 
 document.addEventListener('scroll', () => {
     const scrollHeight = window.scrollY
-    let opacity = 1-scrollHeight/homeSection_Height
-   
-    homeSection.style.opacity=opacity
+    let opacity = 1 - scrollHeight / homeSection_Height
+
+    homeSection.style.opacity = opacity
 })
 
 
+// 프로젝트 클릭시 
+//해당 프로젝트만 필터링해서 보여주기 
+
+const work_Categories = document.querySelector('.work__categories')
+const project = document.querySelectorAll('.project')
+const work__projects = document.querySelector(".work__projects")
+
+const SHOW = "show"
+const SHOWING = 'showing'
+
+work_Categories.addEventListener('click', (event) => {
+
+    const target = event.target;
+    const filter = target.dataset.filter;
+
+    if (filter == null) {
+        return;
+    }
+
+    project.forEach((projects) => {
+        const project_Type = projects.dataset.type
+
+        projects.classList.add(SHOW)
+        
+        //클릭할때마다 애니메이션 효과주기
+        work__projects.classList.add(`${SHOWING}`)
+        setTimeout(() => {
+            work__projects.classList.remove(`${SHOWING}`)
+        }, 700)
+
+        if (project_Type === filter) {
+            projects.classList.remove(SHOW)
+
+        } else if (filter === "all") {
+            projects.classList.add(SHOW)
+
+        }
+    })
+
+
+})

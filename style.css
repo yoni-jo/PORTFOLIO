@@ -508,6 +508,7 @@ h2,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: hidden;
 }
 
 .work__projects .project {
@@ -518,8 +519,26 @@ h2,
     border: 3px solid var(--color-purple);
     border-radius: 5px;
     overflow: hidden;
+    display: none;
 }
-
+.work__projects .project.show{
+    display: block;
+}
+.work__projects.showing{
+    opacity: 0;
+    animation: showing .6s forwards;
+}
+@keyframes showing {
+    0%{
+        opacity: 0;
+        transform:scale(0)
+    }
+    100%{
+        opacity: 1;
+        transform:scale(100%)
+    }
+    
+}
 .work__projects .project .project__img {
     max-width: 100%;
     max-height: 100%;
