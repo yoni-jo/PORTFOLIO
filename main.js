@@ -9,6 +9,10 @@ const top_Btn = document.querySelector(".arrow_top--btn")
 
 const BLUE = 'blue'
 const HIDE = "hide"
+const ACTIVE = 'active'
+const SHOW = "show"
+const SHOWING = 'showing'
+
 document.addEventListener("scroll", (event) => {
     const scrollHeight = window.scrollY
 
@@ -23,17 +27,24 @@ document.addEventListener("scroll", (event) => {
 })
 
 //메뉴 클릭시 해당 세션으로 스크롤 이벤트주기.
-
+//"추가 "=>검색된 메뉴 색상 변경
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbar_li = navbarMenu.querySelectorAll('li');
+
 
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
     const hook = target.dataset.hook;
     if (hook == null) {
         return;
-    } else {
-        scrollToSlide(hook)
     }
+    scrollToSlide(hook)
+    
+    //검색된 메뉴 색상 변경
+    navbar_li.forEach(list => {
+        list.classList.remove(`${ACTIVE}`)
+    })
+    target.classList.add(`${ACTIVE}`)
 })
 
 //contact me버튼 클릭시 해당 세션으로 스크롤 이벤트주기.
@@ -82,28 +93,34 @@ document.addEventListener('scroll', () => {
 
 // 프로젝트 클릭시 
 //해당 프로젝트만 필터링해서 보여주기 
-
+//"추가 "=>검색된 메뉴 색상 변경
 const work_Categories = document.querySelector('.work__categories')
+const category_Btn = work_Categories.querySelectorAll("li button")
 const project = document.querySelectorAll('.project')
 const work__projects = document.querySelector(".work__projects")
 
-const SHOW = "show"
-const SHOWING = 'showing'
 
 work_Categories.addEventListener('click', (event) => {
 
     const target = event.target;
     const filter = target.dataset.filter;
 
+    //검색된 메뉴 색상 변경
+    category_Btn.forEach(list => {
+        list.classList.remove(`${ACTIVE}`)
+    })
+    target.classList.add(`${ACTIVE}`)
+
     if (filter == null) {
         return;
     }
+
 
     project.forEach((projects) => {
         const project_Type = projects.dataset.type
 
         projects.classList.add(SHOW)
-        
+
         //클릭할때마다 애니메이션 효과주기
         work__projects.classList.add(`${SHOWING}`)
         setTimeout(() => {
