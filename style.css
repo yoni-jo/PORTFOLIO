@@ -251,15 +251,17 @@ button {
 
 .home__title .cursor::after {
     position: absolute;
-    right:-10px;
+    right: -10px;
     content: "";
     width: 2px;
     height: 1.2em;
     background-color: var(--color-white);
 }
-.cursor.active::after{
+
+.cursor.active::after {
     display: none;
 }
+
 .contact--btn {
     position: absolute;
     bottom: 1.5rem;
@@ -637,6 +639,32 @@ h2,
     padding-right: 1em;
 }
 
+/* TOP BUTTON */
+
+.arrow_top--btn {
+    position: fixed;
+    padding: 12px 20px 10px;
+    bottom: 2em;
+    right: 2em;
+    background-color: #b1b1b1;
+    color: var(--color-purple);
+    font-weight: var(--weight-bold);
+    font-size: var(--font-medium);
+    border: none;
+    border-radius: 23px;
+    background: linear-gradient(112deg, #f0f0f0, #cacaca);
+    box-shadow: 1px 4px 0px 0px #bcbcbc, 2px 5px 0px #ffffff;
+    transition: color .3s;
+}
+
+
+
+.arrow_top--btn:hover {
+    bottom: 1.9em;
+    color: var(--color-yellow);
+    -webkit-text-stroke: 1px var(--color-white);
+}
+
 /* 반응형 */
 
 @media screen and (max-width:768px) {
@@ -711,4 +739,16 @@ h2,
         max-width: 100%;
     }
 
+    /* TOP BBUTTON */
+    .arrow_top--btn {
+        transform: scale(.7);
+        right: 0.2em;
+        bottom: .9em
+    }
+
+    .arrow_top--btn:hover {
+        bottom: .87em;
+        color: var(--color-yellow);
+        -webkit-text-stroke: 1px var(--color-white);
+    }
 }
