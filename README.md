@@ -10,4 +10,20 @@
 ### 컨셉정리
 
 click ==><br>[notion 링크](https://heavenly-ant-3f9.notion.site/Portfollo-WebSite-016f1c7f822d404eb0aa01feba9d9c98)
+
+---  
+<details>
+    <summary>2021.8.15 수정사항</summary> 
+
+## <b>Intersection Observer API을 사용하여  
+## 스크롤시 해당세션과 관련된 메뉴버튼이 변하게 설정</b><br/>   
+<img src="./img/완성모습/수정.gif" width="550px">
+<br>
+
+### 하지만 새로운 문제 발견..  
+ - 위로 올렸을때 특정 세션을 건너뛰는 버그가 있음
+ - 반응형일때는 아래 스크롤시 건너뛰는 문제점 발생..
+ 
+ => API 이해도 부족으로 나중에 천천히 수정 예정... 😭😭😢
+</details>
 ---
