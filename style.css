@@ -95,7 +95,7 @@ button {
 .hide {
     display: none;
 }
-
+section{transition: 300ms;}
 /* NAV */
 
 #navbar {
@@ -763,9 +763,6 @@ font-weight: bolder;
     .home__profile,
     .home__title {
         transform: scale(.7);
-    }
-    .home__title{
-        margin-top: -70px;
     }
    
     .contact--btn {

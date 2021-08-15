@@ -39,7 +39,7 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
     scrollToSlide(hook)
-    
+
     //검색된 메뉴 색상 변경
     navbar_li.forEach(list => {
         list.classList.remove(`${ACTIVE}`)
@@ -72,12 +72,38 @@ top_Btn.addEventListener("click", (event) => {
 function scrollToSlide(selector) {
     const section = document.querySelector(selector);
     const section_Top = section.offsetTop - navbar_Height
+
     window.scrollTo({
         top: section_Top,
         behavior: "smooth"
     })
 }
 
+//스크롤시 각 세션위치에 맞는 메뉴버튼 활성화 
+const options = {
+    root: null,
+    rootMargin: '65px',
+    threshold: .8
+}
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navbar_li.forEach(list => {
+                if (entry.target.id === list.dataset.hook.substr(1)) {
+                    list.classList.add(`${ACTIVE}`)
+                } else {
+                    list.classList.remove(`${ACTIVE}`)
+                }
+            })
+        }
+    })
+}
+
+const observer = new IntersectionObserver(callback, options)
+const section = document.querySelectorAll('section')
+section.forEach(section => {
+    observer.observe(section)
+})
 //스크롤시 home 세션의 opacity값이 변하게하기
 
 const homeSection = document.querySelector('#home')
@@ -141,9 +167,9 @@ work_Categories.addEventListener('click', (event) => {
 
 
 //햄버거 버튼 클릭시 숨겨진 메뉴 보이게 하기
-const ham_Btn= document.querySelector('.btn--burger')
-const nav_bar=document.querySelector('.navbar__menu')
-ham_Btn.addEventListener('click', ()=>{
+const ham_Btn = document.querySelector('.btn--burger')
+const nav_bar = document.querySelector('.navbar__menu')
+ham_Btn.addEventListener('click', () => {
     const CLOSE = 'close'
     ham_Btn.classList.toggle(`${CLOSE}`)
     nav_bar.classList.toggle(`${SHOW}`)
