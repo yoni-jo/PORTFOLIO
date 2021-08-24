@@ -33,6 +33,8 @@
 
 html {
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 62px;
 }
 
 ul {
@@ -48,7 +50,9 @@ img {
     display: block;
 
 }
-
+section{
+    scroll-snap-align: start;
+}
 .section {
     width: 100%;
     padding: 3.125em;
