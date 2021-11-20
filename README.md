@@ -14,7 +14,7 @@ click ==><br>[notion 링크](https://heavenly-ant-3f9.notion.site/Portfollo-WebS
 <details>
     <summary>2021.8.24 수정사항</summary> 
 
-## <b>css에 재밌는 기능을 찾았다!╚(•⌂•)╝  
+## <b>css에 재밌는 기능을 찾았다! ╚(•⌂•)╝  
 ## 'Scroll Snap' 을 사용하여  
 ### 스크롤시 해당세션에 맞춰내려가게 수정했다.</b>
 <br/>    

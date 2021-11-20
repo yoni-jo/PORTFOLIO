@@ -17,6 +17,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap"
     rel="stylesheet">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./style.css">
@@ -24,6 +27,10 @@
   <script src="./main.js" defer></script>
   <script src="./typing.js" defer></script>
   <script src="./year.js" defer></script>
+
+  <!-- Featherlight.js -->
+  <script src="featherlight/featherlight.js"></script>
+  <link rel="stylesheet" href="featherlight/featherlight.css">
 
 </head>
 
@@ -52,9 +59,9 @@
   <section id="home" data-id="home">
     <img src="./img/profile.jpg" alt="profile_img" class="home__profile" />
     <h1 class="home__title">안녕하세요! 저는<br><strong class="cursor active"></strong><br>웹퍼블리셔입니다.</h1>
-  
-  <!-- CONTACT ME BTN -->
-   <button class="contact--btn" data-hook="#contact">CONTACT ME!</button>
+
+    <!-- CONTACT ME BTN -->
+    <button class="contact--btn" data-hook="#contact">CONTACT ME!</button>
   </section>
 
   <!-- ABOUT -->
@@ -157,44 +164,67 @@
       <h1>My Work</h1>
       <h3>Project</h3>
       <ul class="work__categories">
-        <li><button class="category--btn active" data-filter="all">All <span class="category--count">5</span></button></li>
-        <li><button class="category--btn"  data-filter="none-Reactive">반응형 <span class="category--count">2</span></button></li>
-        <li><button class="category--btn"  data-filter="reaReactive">비반응형</b> <span class="category--count">3</span></button></li>
+        <li><button class="category--btn active" data-filter="all">All <span class="category--count">7</span></button>
+        </li>
+        <li><button class="category--btn" data-filter="none-Reactive">반응형 <span
+              class="category--count">3</span></button></li>
+        <li><button class="category--btn" data-filter="reaReactive">비반응형</b> <span
+              class="category--count">4</span></button></li>
       </ul>
       <div class="work__projects ">
-        <a href="http://alterego.dothome.co.kr/EGGDROP/" class="project show" data-type="reaReactive">
+        <a href="http://alterego.dothome.co.kr/Portfolio/" data-featherlight="iframe" class="project show"
+          data-type="reaReactive">
           <img src="./img/포트폴리오/portfolio.jpg" alt="Yoni_PORTFOLIO" class="project__img">
           <div class="project__description">
             <h3>PORTFOLIO</h3>
             <span>#반응형#HTML+CSS+JS</span>
           </div>
         </a>
-        <a href="http://alterego.dothome.co.kr/EGGDROP/" class="project show" data-type="none-Reactive">
+        <a href="http://alterego.dothome.co.kr/EGGDROP/" data-featherlight="iframe" class="project show"
+          data-type="none-Reactive">
           <img src="./img/포트폴리오/에그드랍.jpg" alt="EGGDROP" class="project__img">
           <div class="project__description">
             <h3>에그드랍</h3>
             <span>#비반응형#HTML+CSS+JS</span>
           </div>
         </a>
-        <a href="http://alterego.woobi.co.kr/pf3/" class="project show" data-type="reaReactive">
+        <a href="http://alterego.woobi.co.kr/pf3/" data-featherlight="iframe" class="project show"
+          data-type="reaReactive">
           <img src="./img/포트폴리오/state.jpg" alt="stated" class="project__img">
           <div class="project__description">
             <h3>STATED</h3>
             <span>#반응형#HTML+CSS+JS</span>
           </div>
         </a>
-        <a href="http://alterego.woobi.co.kr/pf2/" class="project show" data-type="none-Reactive">
+        <a href="http://alterego.woobi.co.kr/pf2/ " data-featherlight="iframe" class="project show"
+          data-type="none-Reactive">
           <img src="./img/포트폴리오/세움터.jpg" alt="새움터" class="project__img">
           <div class="project__description">
             <h3>새움터</h3>
             <span>#비반응형#HTML+CSS</span>
           </div>
         </a>
-        <a href="http://alterego.woobi.co.kr/pf1/" class="project show"  data-type="none-Reactive">
+        <a href="http://alterego.woobi.co.kr/pf1/" data-featherlight="iframe" class="project show"
+          data-type="none-Reactive">
           <img src="./img/포트폴리오/퍼시스.jpg" alt="퍼시스" class="project__img">
           <div class="project__description">
             <h3>퍼시스</h3>
             <span>#비반응형#HTML+CSS</span>
+          </div>
+        </a>
+        <a href="https://yoni-jo.github.io/hotelsuiteian/index.html" data-featherlight="iframe" class="project show"
+          data-type="none-Reactive">
+          <img src="./img/포트폴리오/스위티안호텔.jpg" alt="스위티안" class="project__img">
+          <div class="project__description">
+            <h3>스위티안</h3>
+            <span>#비반응형#풀페이지#HTML+CSS+JS</span>
+          </div>
+        </a>
+        <a href="https://cotie.netlify.app/" data-featherlight="iframe" class="project show" data-type="reaReactive">
+          <img src="./img/포트폴리오/꼬띠샵.jpg" alt="코띠샵" class="project__img">
+          <div class="project__description">
+            <h3>Cotie</h3>
+            <span>#반응형#HTML+CSS+JS+ParcelBundler</span>
           </div>
         </a>
       </div>
@@ -223,7 +253,7 @@
       </li>
     </ul>
     <div class="copyright">
-      <i class="far fa-copyright"></i>copyright_<span class="year"></span><br><strong>YeonHeeJo</strong>  
+      <i class="far fa-copyright"></i>copyright_<span class="year"></span><br><strong>YeonHeeJo</strong>
     </div>
   </section>
 
