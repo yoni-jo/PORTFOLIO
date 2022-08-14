@@ -3,7 +3,7 @@
 
 |포플주소|사용언어|완성모습|반응형|
 |:--:|:--:|:--:|:--:|
-|click=><br>[Yoni 포트폴리오](http://alterego.dothome.co.kr/Portfolio/)|<strong>HTMl,CSS,JS</strong>|<img src="./img/완성모습/완성모습.gif" width="550px">|**반응형 O** |
+|click=><br>[Yoni 포트폴리오](https://yoni-jo.github.io/PORTFOLIO/)|<strong>HTMl,CSS,JS</strong>|<img src="./img/완성모습/완성모습.gif" width="550px">|**반응형 O** |
 
 ---
 
